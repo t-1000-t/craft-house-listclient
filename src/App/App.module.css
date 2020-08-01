@@ -1,9 +1,16 @@
-.App {
-  text-align: center;
+li {
+    list-style-type: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  text-align: left;
+}
+
+.cartComponent {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 4px;
+    cursor: pointer;
 }
 

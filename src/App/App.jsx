@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import CartCompany from "../CartCompany/CartCompany";
+import stylish from "../App/App.module.css";
 
 class App extends Component {
     state = {
@@ -25,14 +27,19 @@ class App extends Component {
         }
     };
 
+
+
     render() {
         const {array} = this.state;
         return (
-            <ul>
-                {array.length > 0 && array.map(item => (
-                <li>{item._id}</li>
-                ))}
-            </ul>
+            <>
+                <ul className={stylish.App}>
+                    {array.length > 0 && array.map(item => (
+                        <li key={item._id} className={stylish.cartComponent}><CartCompany item={item}/></li>
+                    ))}
+
+                </ul>
+            </>
         );
     }
 }
